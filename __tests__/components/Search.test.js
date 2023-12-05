@@ -13,8 +13,15 @@ import { Search } from '../../src/components/Search';
 //Start here: https://testing-library.com/docs/example-findByText
 //Look for the line that says: 'describe('findByText Examples', () => {'
 
-test('REPLACE_ME', async () => {
-    expect("REPLACE_ME").toBe("REPLACE_ME");
+test("test that checks that the search field has some text typed in", async () => {
+  expect.assertions(2);
+  render(<Search/>)
+  const countryField = screen.getByPlaceholderText("Search a country");
+  expect(countryField).toBeTruthy();
+  
+  fireEvent.change(countryField, { target: { value: "Spain" } });
+  const value = countryField.value
+  expect(value).toBe("Spain");
 });
 
 //TODO: write a snapshot test that captures the Search.js component
