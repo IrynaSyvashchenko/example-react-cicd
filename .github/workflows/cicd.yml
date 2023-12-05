@@ -24,6 +24,8 @@ jobs:
       run: npm ci
     - name: test the code
       run: npm run test
+    - name: run build
+      run: npm run build
        
     # TODO: Run tests here
     # TODO: Run build here
