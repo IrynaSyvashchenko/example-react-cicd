@@ -41,7 +41,7 @@ jobs:
         publish_dir: ./dist
     - name: Build
   env:
-    VITE_APP_PUBLIC_URL: /example-react-cicd/
+    VITE_APP_PUBLIC_URL: https://github.com/IrynaSyvashchenko/example-react-cicd.git
 
 ## TIP
 ## to conditionally run a job or a step use the if key.
